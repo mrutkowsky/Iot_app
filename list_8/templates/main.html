@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Bootstrap core CSS -->
+    <link href="/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/docs/5.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="/docs/5.1/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="/docs/5.1/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
+    <link rel="icon" href="/docs/5.1/assets/img/favicons/favicon.ico">
+    <meta name="theme-color" content="#7952b3">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+    </style>
+</head>
+<body>
+
+<!-- Custom styles for this template -->
+{% block status %}
+<div class="b-example-divider"></div>
+<form method="post">
+    <div class="container px-4 py-5" id="hanging-icons">
+        <h2 class="pb-2 border-bottom">Apps</h2>
+        <p  style="line-height: 20%; ">Status codes:</p>
+        <p style="line-height: 20%; ">1 = Running</p>
+        <p style="line-height: 20%; ">0 = Waiting</p>
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+            <div class="col d-flex align-items-start">
+                <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+                </div>
+                <div>
+                    <h2><a href="/app1">App 1</a></h2>
+                    <p>Status: {{status1}} </p>
+                    <p>Start(1)/Stop(0): <input type="text" name="s_1" value='1'/></p>
+                </div>
+            </div>
+            <div class="col d-flex align-items-start">
+                <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+                </div>
+                <div>
+                    <h2><a href="/app2">App 2</a></h2>
+                    <p>Status: {{status2}}</p>
+                    <p>Start(1)/Stop(0): <input type="text" name="s_2" value='1'/></p>
+                </div>
+            </div>
+            <div class="col d-flex align-items-start">
+                <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+                </div>
+                <div>
+                    <h2><a href="/app3">App 3</a></h2>
+                    <p>Status: {{status3}}</p>
+                    <p>Start(1)/Stop(0): <input type="text" name="s_3" value='1'/></p>
+                </div>
+            </div>
+        </div>
+        <center>
+            <p><input type="submit" value="update"/></p>
+        </center>
+    </div>
+</form>
+{% endblock %}
+<script src="/docs/5.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+
+</body>
+</html>
