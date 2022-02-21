@@ -1,4 +1,4 @@
-This app consist of 3 fake IoT signals developed based on csv files, one main API for managing those apps, templates for web interface and few tools to 
+This app consists of 3 fake IoT signals developed based on csv files, one main API for managing those apps, templates for web interface and few tools to 
 make it more interesting.
 
 Library picked for creating API is Flask based on it's simplicity.
